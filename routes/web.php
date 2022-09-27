@@ -20,6 +20,7 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => '/'], function() use($router){
     $router->get('getLines', 'OpenMapsController@getLines');
     $router->get('setPoints', 'OpenMapsController@setPoints');
+    $router->get('getPoints', 'OpenMapsController@getPoints');
     // $router->post('registrant', 'RegistrantController@create');
     // $router->get('registrant/{id}', 'RegistrantController@show');
     // $router->put('registrant/{id}', 'RegistrantController@update');

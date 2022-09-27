@@ -18,6 +18,11 @@ class OpenMapsController extends Controller
         return 'Hola, ya llego a setPoints';
     }
 
+    public function getPoints()
+    {
+        return 'Hola, ya llego a getPoints';
+    }
+
     /**
      * Display a listing of the resource.
      *
