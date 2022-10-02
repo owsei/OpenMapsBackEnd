@@ -3,24 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\OpenMaps;
 
 
 class OpenMapsController extends Controller
 {
     
-    public function getLines()
+    public function getLines(Request $request)
     {
-        return 'Hola, ya llego';
+        $model = new OpenMaps();
+        $lineas = $model->getOpenMapsLines();
+        
+        
+        return $lineas;
     }
 
-    public function setPoints()
+    public function setOpenMapsPoints()
     {
-        return 'Hola, ya llego a setPoints';
+        $latitude = $_GET['latitud'];
+        $longitud = $_GET['longitud'];
+        echo "latitude:".$latitude;
+        echo "longitude:".$latitude;
+        $model= new OpenMaps();
+        return $model->setOpenMapsPoints();
     }
 
-    public function getPoints()
+    public function getOpenMapsPoints()
     {
-        return 'Hola, ya llego a getPoints';
+        return 'Hola, ya llego a getOpenMapsPoints';
     }
 
     /**
